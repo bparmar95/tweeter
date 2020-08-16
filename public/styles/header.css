@@ -1,0 +1,22 @@
+
+.navHeader {
+background-color: #008c8c;
+background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+}
+
+
+#avi {
+height: 400px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#nameHeader {
+display: flex;
+justify-content: center;
+}
+
+#headerAvi {
+  width: 150px;
+}

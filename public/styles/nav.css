@@ -1,0 +1,22 @@
+
+nav {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFF;
+  background-color: #4056A1;
+  font-size: 24px;
+  height: 120px
+}
+#logo {
+display: inline-block;
+margin-top: 1.5em;
+margin-left: 1.5em;
+font-family: 'Bungee';
+}
+#phrase {
+display: flex;
+justify-content: flex-end;
+}
+#arrow-down {
+display: flex;
+justify-content: flex-end;
+}
