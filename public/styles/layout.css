@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -23,3 +24,186 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+   margin: 10%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f1ec;
+ }
+ #tweet-text {
+   width: 100%;
+ }
+
+ .tweetHeader {
+   display: flex;
+   justify-content: space-between;
+ }
+ .footing {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .topNav {
+   position: fixed;
+   width: 100%;
+ }
+
+ /* Desktop Styles */
+@media only screen and (min-width: 768px) {
+
+  .tweets {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .new-tweet {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navHeader {
+    background-color: #008c8c;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    width: 30%;
+    position: absolute; top: 240px;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+  }
+
+  #avi {
+    width: 45%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+    
+    #nameHeader {
+    display: flex;
+    justify-content: center;
+    }
+  
+  .container {
+    width: 50%;
+    position: absolute; right: 30px; top: 20px;
+  }
+  #tweet-text {
+    width: 100%;
+  }
+ 
+  .tweetHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footing {
+   display: flex;
+   justify-content: space-between;
+  }
+ 
+  .topNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+  }
+  #tweetButton {
+    background-color: aqua;
+  }
+  
+  .tweetContainer {
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2.5px solid black;
+  }
+  .tweetContainer:hover {
+    box-shadow: 5px 10px;
+  }
+  .tweetContainer:hover #handle {
+    opacity: 1;
+  }
+  
+  #tweetAvi {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .tweetHeading {
+    display: flex; 
+  }
+  #handle {
+    opacity: 0;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 10%;
+   justify-content: center;
+   align-items: center;
+   background-color: #f4f1ec;
+  }
+  #tweet-text {
+    width: 100%;
+  }
+  
+  .tweetHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footing {
+   display: flex;
+   justify-content: space-between;
+  }
+ 
+  .topNav {
+      background-color: #008c8c;
+      background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+  }
+
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+  }
+  #tweetButton {
+    background-color: aqua;
+  }
+  
+  .tweetContainer {
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2.5px solid black;
+  }
+  .tweetContainer:hover {
+    box-shadow: 5px 10px;
+  }
+  .tweetContainer:hover #handle {
+    opacity: 1;
+  }
+  
+  #tweetAvi {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .tweetHeading {
+    display: flex; 
+  }
+  #handle {
+    opacity: 0;
+  }
+}
