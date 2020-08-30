@@ -28,3 +28,10 @@
   opacity: 0;
 }
 
+#errorBox {
+  color: red;
+}
+
+.form-red {
+  color: red
+}

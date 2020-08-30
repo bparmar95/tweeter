@@ -12,6 +12,11 @@ $(document).ready(function() {
     charRemaining = 140 - strLength;
     console.log(charRemaining);
     $(".counter").text(charRemaining)
+    if (charRemaining < 0) {
+      $(".counter").addClass('form-red')
+    } else {
+      $(".counter").removeClass('form-red')
+    }
     $("#errorBox").slideUp(); 
   })
 

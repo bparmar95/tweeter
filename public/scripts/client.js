@@ -4,45 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
-
-// const renderTweets = function(tweets) {
-//   for (let tweet of tweets) {
-//     let newTweet = createTweetElement(tweet)
-//     $('.tweets-container').append(newTweet);
-//   }
-// }
-
-// const renderTweets = function(tweets) {
-//   tweets.slice().reverse().forEach(function(tweet) {
-//     let newTweet = createTweetElement(tweet)
-//     $('.tweets-container').append(newTweet);
-//   })
-// }
+//import moment from 'moment';
 
 const renderTweets = function(tweets) {
   $('.tweets-container').empty();
@@ -68,7 +30,7 @@ const createTweetElement = function(tweetObj) {
     </div>
     <hr>
     <footer class="footing">
-              <p>${tweetObj.created_at}</p>
+              <p>${moment(tweetObj.created_at).format("MM-DD-YYYY")}</p>
             <div>
               <i class="fas fa-heart"></i>
               <i class="fas fa-retweet"></i>
@@ -84,42 +46,30 @@ const loadTweets = function() {
   });
 }
 
-// const errorMsg = function() {
 
-// }
 
-//console.log($('.counter'));
 const stayOnPage = function() {
   $('.new-tweet form').on('submit', (evt) => {
-  //  console.log($('.counter').val());
     evt.preventDefault();
     if (Number($('.counter').val()) < 0) {
-    //  console.log($('.counter'));
-     // alert("Character limit is too long");
       $("#errorBox").text("Character limit is too long");
       $("#errorBox").slideDown();
       return;
     } else if (Number($('.counter').val()) === 140) {
-      //alert("Nothing has been entered");
       $("#errorBox").text("Nothing has been entered");
       $("#errorBox").slideDown();
-     // document.location.reload(true)
       return;
     } else {
     $.post('/tweets', $(evt.target).serialize()
     ).then(function(response) {
-       // console.log(response);
        $('#tweet-text').val("");
        $('.counter').text("140");
         loadTweets();
-
-        //document.location.reload(true)
     })}})};
 
 
 $(document).ready(function() {
 loadTweets();
 stayOnPage();
-//console.log($('.counter'));
 }
 )
